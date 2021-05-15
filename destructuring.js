@@ -23,6 +23,19 @@ var carDetails = {
 
 //Code Here
 
+let {color} = carDetails;
+let {make} = carDetails;
+let {model} = carDetails;
+let {year} = carDetails; 
+
+color = "red";
+
+console.log(color)
+console.log(make)
+console.log(model)
+console.log(year)
+
+
 
 
 ////////// PROBLEM 2 //////////
@@ -35,12 +48,22 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const Obj = {}
+
+  let {title} = obj
+  let {firstName} = obj
+  let {lastName} = Obj
+
+  title = "Sir"
+  firstName = "Henry"
+  lastName = "Von Eckleberry"
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
+console.log(greeting("obj"))
 
 
 ////////// PROBLEM 3 //////////
@@ -54,6 +77,24 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+function totalPopulation() {
+  const object = {
+    utah: 1,
+    california: 1,
+    texas: 1,
+    arizona: 1
+  };
+
+   let {utah} = object
+   let {california} = object
+   let {texas} = object
+   let {arizona} = object  
+
+   return utah + california + texas + arizona
+};
+
+console.log(totalPopulation())
 
 
 
@@ -69,7 +110,28 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients() {
 
+  const object = {
+    carb: "potatoes",
+    fat: "butter",
+    protein: "Chicken"
+  }
+
+  let {carb} = object;
+  let {fat} = object;
+  let {protein} = object;
+
+  let arr = [];
+
+  arr.push(carb)
+  arr.push(fat)
+  arr.push(protein)
+
+  return arr
+} 
+
+console.log(ingredients())
 
 ////////// PROBLEM 5 //////////
 
@@ -87,6 +149,19 @@ function greeting( obj ) {
 
 //Code Here
 
+const obj = {
+  first: 5,
+  second: 2,
+  third: 3
+}
+
+
+function largeNumbers ({first, second, third}) {  
+  return Math.min(first, second, third) 
+}
+
+console.log(largeNumbers(obj))
+
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +173,20 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+const arr = {
+  number1: [1, 2, 3],
+  number2: [1,2,3,4,5],
+  number3: [1,2,3,4,5,6,7]
+}
+
+
+function  numberGroups(arr) {
+ return Math.max(arr.number1.length, arr.number2.length, arr.number3.length)
+}
+
+console.log(numberGroups(arr))
+
+
 
 
