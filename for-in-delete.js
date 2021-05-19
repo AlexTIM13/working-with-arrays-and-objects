@@ -190,9 +190,8 @@ function deleteBig (obj) {
   for (let key in  obj) {
     if (obj[key] > 100) {
       delete obj[key]
-      return obj
     }
-  }
+  } return obj
 }
 
 console.log(deleteBig(deleteTheBigNumbers))
@@ -220,8 +219,8 @@ function startsWithK (obj) {
   for (let key in obj) {
     if (key.includes("k")) {
       delete obj[key]
-    }return obj
-  }
+    }
+  } return obj
 }
 
 console.log(startsWithK(startsK))
@@ -251,8 +250,8 @@ function hiddenTreasure (obj) {
   for (let key in obj) {
     if (sentence[key].includes("treasure")) {
       delete obj[key]
-    }return obj;
-  }
+    }
+  } return obj
 }
 
 console.log(hiddenTreasure(sentence))
