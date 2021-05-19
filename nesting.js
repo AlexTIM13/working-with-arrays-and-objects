@@ -25,7 +25,7 @@ var employees = [
   {
     "firstName": "Theo",
     "lastName": "Trill",
-    "email": "ttrill2@sina.com.cn",
+    "email": "ttrill2@sina.com '}.cn",
     "department": "Services"
   },
   {
@@ -52,6 +52,18 @@ var employees = [
 
 //Code Here
 
+function employeeUpdater ( arr, item1, item2  ) {
+  var i = arr.indexOf( item1 );
+  var j = arr.indexOf( item2 );
+  if ( i !== -1 ) {
+      arr.splice( i, 1 );
+  } else if ( i !== -1) {
+      arr = "HR"
+  }
+}
+
+employeeUpdater( employees, "Theo", "Lorie" );
+console.info( employees );
 
 
 ////////// PROBLEM 2 //////////
@@ -69,6 +81,12 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+
+
+    let result = workplaceAccidents.filter((item,index)=>{
+      return workplaceAccidents.indexOf(item) === index;
+    })
+    console.log(result);
 
 
 
@@ -97,8 +115,11 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = (cat.catFriends[0].activities[1]);
+console.log(grumpyActivity)
+
+var fluffy2ndFriend = (cat.catFriends[1].name);
+console.log(fluffy2ndFriend )
 
 
 
@@ -139,6 +160,15 @@ var myCar = {
 */
 
 //Code Here
+
+for(var key in myCar) {
+  accidents.forEach(function(acci) {
+    console.log(acci.date)
+  })
+}
+
+
+
 
 
 
