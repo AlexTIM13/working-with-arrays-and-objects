@@ -52,18 +52,24 @@ var employees = [
 
 //Code Here
 
-function employeeUpdater ( arr, item1, item2  ) {
-  var i = arr.indexOf( item1 );
-  var j = arr.indexOf( item2 );
-  if ( i !== -1 ) {
-      arr.splice( i, 1 );
-  } else if ( i !== -1) {
-      arr = "HR"
+// What I need to do
+// employees.splice(2,1) ----remove Theo
+// employees[3].department = "HR" ----Change department
+// console.log(employees)
+
+function employeeUpdater () {
+  employees.forEach(function(employee, index){
+  if (employee.firstName === "Theo") {
+    employees.splice(index,1)
+  } 
+  if (employee.firstName === "Lorie") {
+    employees[index].department = "HR"
   }
+ })
+ return employees
 }
 
-employeeUpdater( employees, "Theo", "Lorie" );
-console.info( employees );
+console.log(employeeUpdater())
 
 
 ////////// PROBLEM 2 //////////
@@ -83,10 +89,21 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 //Code Here
 
 
-    let result = workplaceAccidents.filter((item,index)=>{
-      return workplaceAccidents.indexOf(item) === index;
-    })
-    console.log(result);
+function removeDuplicates() {
+  workplaceAccidents.filter((item,index, array)=>{
+     return array.indexOf(item) === index;
+  })
+  return workplaceAccidents
+}
+
+console.log(removeDuplicates())
+
+
+
+    // let result = workplaceAccidents.filter((item,index)=>{
+    //   return workplaceAccidents.indexOf(item) === index;
+    // })
+    // console.log(result);
 
 
 
@@ -161,16 +178,21 @@ var myCar = {
 
 //Code Here
 
-for(var key in myCar) {
-  accidents.forEach(function(acci) {
-    console.log(acci.date)
+// What I need to do
+// myCar.accidents[2].atFaultForAccident = false
+// console.log(myCar)
+
+
+function recordCleaner () {
+  myCar.forEach(function(car, index) {
+    if (car.accidents.atFaultForAccident === "true") {
+      myCar.accidents[index].atFaultForAccident = "false"
+  }
+    return myCar
   })
 }
 
-
-
-
-
+console.log(recordCleaner())
 
 ////////// PROBLEM 5 //////////
 
